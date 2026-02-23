@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MCREWARD - Elite Gaming Hub</title>
+    
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 15px rgba(34, 211, 238, 0.4); } 50% { box-shadow: 0 0 30px rgba(34, 211, 238, 0.7); } }
+      @keyframes rotate-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      .font-gaming { font-family: 'Orbitron', sans-serif; }
+      .glass { background: rgba(15, 23, 42, 0.9); }
+      @supports (backdrop-filter: blur(12px)) {
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); }
+      }
+      .neon-glow { animation: pulse-glow 3s infinite ease-in-out; }
+      .animate-float { animation: float 4s infinite ease-in-out; }
+      .animate-rotate-slow { animation: rotate-slow 12s infinite linear; }
+      ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
